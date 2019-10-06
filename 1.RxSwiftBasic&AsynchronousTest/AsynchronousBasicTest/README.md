@@ -128,7 +128,10 @@ class ViewController: UIViewController {
 }
 ```
 
-escaping closure 를 사용하여 thread sleep 이 안전하게 완료가 되면 내부에서 만ㄷ는 file 구조체 객체를 반환하여 해당 정보를 바탕으로 레이블의 텍스트를 변경시켰다.
+![Oct-06-2019 20-16-11](https://user-images.githubusercontent.com/33486820/66271748-e1a8f780-e89c-11e9-9623-1dfa5a95604c.gif)
+
+
+escaping closure 를 사용하여 thread sleep 이 안전하게 완료가 되면 내부에서 만드는 file 구조체 객체를 반환하여 해당 정보를 바탕으로 레이블의 텍스트를 변경시켰다.
 
 항상 UI의 변경은 Main Thread에서 일어 난다는 것을 유념하고 위의 함수에서는 다른 쓰레드에서 5초 동안 실행이 이루어지고 Main 쓰레드에서 completion 함수를 호출해준다.
 
@@ -149,13 +152,10 @@ escaping closure 를 사용하여 thread sleep 이 안전하게 완료가 되면
 
 이런 문제점을 보완하기 위해 ReactiveX의 개념이 등장했고 등장 배경은 이러하다
 
-> **관찰 가능한 (Observable)** 한 이벤트들에 대해 **구독(Subscribe)**를 하며 대응하자!
->
-> 
+> **관찰 가능한 (Observable)** 한 이벤트들에 대해 **구독(Subscribe)** 를 하며 대응하자!  
+
 
 ## 비동기 프로그래밍 용어  
-
-
 
 ### Statem and Specifically, Shared Mutable State
 
