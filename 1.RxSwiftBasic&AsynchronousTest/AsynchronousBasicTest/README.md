@@ -194,4 +194,4 @@ escaping closure 를 사용하여 thread sleep 이 안전하게 완료가 되면
 
 - [마기의 개발블로그 - RxSwift 알아보기](https://magi82.github.io/ios-rxswift-01/?source=post_page-----4b5187d07a33----------------------)
 - [ReactiveX Documents](http://reactivex.io/intro.html)
-- [RxSwift 순한맛](
+- [RxSwift 순한맛](https://mym0404.blog.me/221585744991)
