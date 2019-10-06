@@ -6,7 +6,8 @@
 
 Reactive란 **"반응하는, 반응을 보이는"** 이란 사전적 정의를 갖는다. 
 
-![image-20191006182501385](/Users/youngjungoo/Library/Application Support/typora-user-images/image-20191006182501385.png)
+<img width="763" alt="image" src="https://user-images.githubusercontent.com/33486820/66268934-5e2bde00-e87d-11e9-882d-ce8522caa277.png">
+
 
 ReactiveX 사이트에 명시 되어있는 말이다. 
 
@@ -14,7 +15,8 @@ ReactiveX 사이트에 명시 되어있는 말이다.
 
 뜻 풀이를 그대로하면 위와 같은 의미를 갖는다. 그 의미를 조금 더 자세하게 보면 아래와 같은 키워드로 나타내고 있다
 
-![image-20191006183201333](/Users/youngjungoo/Library/Application Support/typora-user-images/image-20191006183201333.png)
+<img width="748" alt="image" src="https://user-images.githubusercontent.com/33486820/66268941-756acb80-e87d-11e9-94eb-2a4f38211f52.png">  
+
 
 > **옵저버패턴** 과 **이터레이터패턴**, 그리고 **함수형 프로그래밍** 을 이용한 **반응형 프로그램** 으로써 **비동기식**프로그램 개발에 용이하다.
 
@@ -65,7 +67,8 @@ Applie은 iOS SDK에서 비동기식 코드를 작성 할 수 있도록 아래�
 
 하지만 위의 코드를 실행하면 5초뒤에 아래와 같은 에러가 발생하면서 앱은 종료가 된다.
 
-![image-20191006195535639](/Users/youngjungoo/Library/Application Support/typora-user-images/image-20191006195535639.png)
+<img width="767" alt="image" src="https://user-images.githubusercontent.com/33486820/66268949-89163200-e87d-11e9-9631-10f6525f3dcf.png">  
+
 
 GCD를 사용하는 것 중의 가장 기본이 되는 것이 **UI의 변경은 오직 메인 스레드에서만 ** 을 숙지하고 있어야한다. 그렇기 때문에 아래와 같이 다시 코드를 변경 시켜 주어야 한다.
 
