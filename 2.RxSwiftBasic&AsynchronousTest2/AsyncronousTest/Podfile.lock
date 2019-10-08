@@ -1,0 +1,32 @@
+PODS:
+  - Bolts-Swift (1.4.0)
+  - PromiseKit (6.11.0):
+    - PromiseKit/CorePromise (= 6.11.0)
+    - PromiseKit/Foundation (= 6.11.0)
+    - PromiseKit/UIKit (= 6.11.0)
+  - PromiseKit/CorePromise (6.11.0)
+  - PromiseKit/Foundation (6.11.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.11.0):
+    - PromiseKit/CorePromise
+  - RxSwift (5.0.0)
+
+DEPENDENCIES:
+  - Bolts-Swift
+  - PromiseKit
+  - RxSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bolts-Swift
+    - PromiseKit
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Bolts-Swift: 650d72e8017721b1a6bbe43d542c4578f8e5ba6f
+  PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+
+PODFILE CHECKSUM: 553e922f993b79a9878893b75b7a5a187f37ebbf
+
+COCOAPODS: 1.7.5
