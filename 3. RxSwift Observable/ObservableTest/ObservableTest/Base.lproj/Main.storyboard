@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rx Swift View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RxSwiftViewController" customModule="ObservableTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gfV-oF-ovC">
+                                <rect key="frame" x="0.0" y="94" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="1Km-0H-RUe"/>
+                                    <constraint firstAttribute="height" constant="250" id="bwv-f4-tHz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTp-jr-9hj">
+                                <rect key="frame" x="20" y="364" width="69" height="30"/>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="onLoadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YnK-x1-6Uk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZ5-qV-tYw">
+                                <rect key="frame" x="109" y="364" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zbm-st-ppu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEz-NZ-Dwv">
+                                <rect key="frame" x="352" y="364" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LZ5-qV-tYw" firstAttribute="top" secondItem="gfV-oF-ovC" secondAttribute="bottom" constant="20" id="8bK-qy-Y5O"/>
+                            <constraint firstItem="LZ5-qV-tYw" firstAttribute="leading" secondItem="oTp-jr-9hj" secondAttribute="trailing" constant="20" id="Jf1-UK-aXy"/>
+                            <constraint firstItem="hEz-NZ-Dwv" firstAttribute="top" secondItem="gfV-oF-ovC" secondAttribute="bottom" constant="20" id="NTF-al-5Xu"/>
+                            <constraint firstItem="gfV-oF-ovC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wej-Dg-wMS"/>
+                            <constraint firstItem="oTp-jr-9hj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lkr-Lu-KKF"/>
+                            <constraint firstItem="oTp-jr-9hj" firstAttribute="top" secondItem="gfV-oF-ovC" secondAttribute="bottom" constant="20" id="rjd-Xy-HXA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hEz-NZ-Dwv" secondAttribute="trailing" constant="20" id="rx2-JW-bYw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gfV-oF-ovC" secondAttribute="trailing" id="wmf-rz-fEk"/>
+                            <constraint firstItem="gfV-oF-ovC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="xRl-Ju-o2o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="hEz-NZ-Dwv" id="1df-oX-Moy"/>
+                        <outlet property="imageView" destination="gfV-oF-ovC" id="zAC-2l-mQR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
