@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             case .completed:
                 print("onComplete")
             }
-        }
+        }.disposed(by: <#T##DisposeBag#>)
     
     }
     
