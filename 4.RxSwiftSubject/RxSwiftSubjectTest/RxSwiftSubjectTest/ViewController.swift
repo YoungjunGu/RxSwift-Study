@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        asyncSubject()
+        ambTest()
         
     }
     
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         case anError
     }
     
-    func behaviorSuject() {
+    func behaviorSujectTest() {
         let subject = BehaviorSubject(value: "Initial value")
         let disposeBag = DisposeBag()
         
@@ -144,6 +144,132 @@ class ViewController: UIViewController {
         subject.onError(MyError.anError)
     }
     
+    func combineLatestTest() {
+        let disposeBag = DisposeBag()
+        let korean = Observable.from(["가","나", "다"])
+        let english = Observable.from(["A","B","C"])
+        Observable.combineLatest(
+            korean,
+            english
+        ) { ($0, $1) }
+            .subscribe {
+                print($0)
+        }
+        .disposed(by: disposeBag)
+    }
     
+    func mergeTest() {
+        let disposeBag = DisposeBag()
+        let redTeam = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+            .map{ "red: \($0)" }
+        let bluTeam = Observable<Int>.interval(.seconds(2), scheduler: MainScheduler.instance)
+            .map{ "blue: \($0)" }
+        
+        let startTime = Date().timeIntervalSince1970
+        
+        Observable
+            .of(redTeam, bluTeam)
+            .merge()
+            .subscribe {
+                print("\($0): \(Int(Date().timeIntervalSince1970 - startTime))")
+        }
+        .disposed(by: disposeBag)
+    }
+    
+    func switchLatestTest() {
+        let disposeBag = DisposeBag()
+        let subjectA = PublishSubject<String>()
+        let subjectB = PublishSubject<String>()
+        let switchTest = BehaviorSubject<Observable<String>>(value: subjectA)
+        switchTest.switchLatest().subscribe {
+            print($0)
+        }.disposed(by: disposeBag)
+        subjectA.onNext("A-1")
+        switchTest.onNext(subjectB)
+        subjectA.onNext("A-2")
+        subjectB.onNext("B-1")
+        subjectB.onNext("B-2")
+    }
+    
+    
+    func zipTest() {
+        let disposeBag = DisposeBag()
+        let korean = Observable<String>.from(["가", "나", "다", "라"])
+        let number = Observable<Int>.from([1, 2, 3])
+        
+        Observable
+            .zip(
+                korean,
+                number
+        )
+            .subscribe {
+                print($0)
+        }
+        .disposed(by: disposeBag)
+    }
+    
+    func concastTest() {
+        let disposeBag = DisposeBag()
+        let korean = Observable<String>.from(["가", "나", "다", "라"])
+        let english = Observable<String>.from(["A","B","C"])
+        
+        korean
+            .concat(english)
+            .subscribe {
+                print($0)
+        }
+        .disposed(by: disposeBag)
+    }
+    
+    func concatSubjectTest() {
+        let disposeBag = DisposeBag()
+        let subjectA = PublishSubject<String>()
+        let subjectB = PublishSubject<String>()
+        
+        subjectA.subscribe {
+            print($0)
+        }
+        .disposed(by: disposeBag)
+        
+        subjectB.subscribe {
+            print($0)
+        }
+        .disposed(by: disposeBag)
+        
+        
+        Observable
+            .concat([subjectA, subjectB])
+            .subscribe {
+                print("concat event: \($0)")
+        }
+        .disposed(by: disposeBag)
+        
+        subjectA.onNext("A - event1")
+        subjectA.onNext("A - event2")
+        subjectA.onCompleted()
+        subjectB.onNext("B - evnet1")
+        subjectB.onNext("B - event2")
+       //  subjectB.onError(MyError.anError)
+    // subjectA.onNext("A - event3")
+        subjectB.onCompleted()
+    }
+    
+    func ambTest() {
+        let disposeBag = DisposeBag()
+        let first = Observable<Int>.interval(.seconds(5), scheduler: MainScheduler.instance).map {
+            "first: \($0)"
+        }
+        let second = Observable<Int>.interval(.seconds(2), scheduler: MainScheduler.instance).map {
+            "second: \($0)"
+        }
+        let third = Observable<Int>.interval(.seconds(4), scheduler: MainScheduler.instance).map {
+            "third: \($0)"
+        }
+        
+        first.amb(second).amb(third).subscribe(onNext: { e in
+            print(e)
+            })
+            .disposed(by: disposeBag)
+    }
 }
 
