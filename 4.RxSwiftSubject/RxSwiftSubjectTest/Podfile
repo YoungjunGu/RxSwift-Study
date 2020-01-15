@@ -15,6 +15,6 @@ target 'RxSwiftSubjectTest' do
   target 'RxSwiftSubjectTestUITests' do
     # Pods for testing
   end
+  pod 'RxCocoa'
   pod 'RxSwift'  
-
 end

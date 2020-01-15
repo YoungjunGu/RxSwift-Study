@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2DC953634FB56737235C36DA /* Pods_RxSwiftSubjectTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC017B6E6AA3A8F5B689B475 /* Pods_RxSwiftSubjectTest.framework */; };
 		4F8B2ED8C96F14E9217C2850 /* Pods_RxSwiftSubjectTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418D93FCE75C3B5DE1C87230 /* Pods_RxSwiftSubjectTestTests.framework */; };
 		8BF8872A07820F668AFA900E /* Pods_RxSwiftSubjectTest_RxSwiftSubjectTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB48FC5790CBF6C82BB41BE1 /* Pods_RxSwiftSubjectTest_RxSwiftSubjectTestUITests.framework */; };
+		EF0F62E123BA2D07001D43FD /* SubjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F62E023BA2D07001D43FD /* SubjectTest.swift */; };
 		EF90FEF523B08059008E3437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF90FEF423B08059008E3437 /* AppDelegate.swift */; };
 		EF90FEF723B08059008E3437 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF90FEF623B08059008E3437 /* SceneDelegate.swift */; };
 		EF90FEF923B08059008E3437 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF90FEF823B08059008E3437 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		CA19B3010A7A52A1FAB4FC3C /* Pods-RxSwiftSubjectTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftSubjectTest.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftSubjectTest/Pods-RxSwiftSubjectTest.release.xcconfig"; sourceTree = "<group>"; };
 		CB48FC5790CBF6C82BB41BE1 /* Pods_RxSwiftSubjectTest_RxSwiftSubjectTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftSubjectTest_RxSwiftSubjectTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC1729B935E97EB2B281A62 /* Pods-RxSwiftSubjectTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftSubjectTestTests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftSubjectTestTests/Pods-RxSwiftSubjectTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF0F62E023BA2D07001D43FD /* SubjectTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTest.swift; sourceTree = "<group>"; };
 		EF90FEF123B08059008E3437 /* RxSwiftSubjectTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftSubjectTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF90FEF423B08059008E3437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF90FEF623B08059008E3437 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +103,6 @@
 				2E349AE3BC3252B5B7AC861F /* Pods-RxSwiftSubjectTestTests.debug.xcconfig */,
 				DDC1729B935E97EB2B281A62 /* Pods-RxSwiftSubjectTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -135,6 +136,7 @@
 				EF90FEF823B08059008E3437 /* ViewController.swift */,
 				EF90FEFA23B08059008E3437 /* Main.storyboard */,
 				EF90FEFD23B0805A008E3437 /* Assets.xcassets */,
+				EF0F62E023BA2D07001D43FD /* SubjectTest.swift */,
 				EF90FEFF23B0805A008E3437 /* LaunchScreen.storyboard */,
 				EF90FF0223B0805A008E3437 /* Info.plist */,
 			);
@@ -408,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0F62E123BA2D07001D43FD /* SubjectTest.swift in Sources */,
 				EF90FEF923B08059008E3437 /* ViewController.swift in Sources */,
 				EF90FEF523B08059008E3437 /* AppDelegate.swift in Sources */,
 				EF90FEF723B08059008E3437 /* SceneDelegate.swift in Sources */,
